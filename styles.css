@@ -1,7 +1,30 @@
 * {
   font-family: comicsansms;
+}
+header {
+  width: 100%;
+  height: 30%;
+}
+body {
+  width: 100%;
+  height: 50%;
   background-color: #e7c0f7;
   color: #3d127d;
+}
+footer {
+  width: 100%;
+  height: 20%;
+}
+
+.container {
+  background-color: #30a7f1;
+  padding: 20px;
+  border: 10px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #a65106;
 }
 img {
   width: 50px;
