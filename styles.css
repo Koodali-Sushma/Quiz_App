@@ -1,4 +1,16 @@
-* {
+@import "./global.css";
+
+@import "./bookmark.css";
+@import "./card-list.css";
+@import "./card.css";
+@import "./header.css";
+@import "./navigation.css";
+@import "./profile.css";
+@import "./counter-list.css";
+html {
+  scroll-behavior: smooth;
+}
+/* {
   font-family: comicsansms;
 }
 html {
@@ -51,7 +63,7 @@ input:hover {
 main {
   position: absolute;
   width: 100%;
-  height: 70%;
+  height: 80%;
   background-color: #6c3d8d;
   color: yellow;
   align-content: center;
@@ -148,3 +160,4 @@ img {
 .answer_text {
   color: tomato;
 }
+*/

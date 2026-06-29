@@ -1,78 +1,179 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header-content"></div>
+    <header class="header">
+      <img src="./images/neon-quiz.jpg.avif" />
     </header>
-
-    <nav>
-      <ul class="nav_flexbox">
-        <li>
-          <h5>Quiz Topics:</h5>
+    <main>
+      <ul class="card-list">
+        <!--
+                FIRST CARD
+              -->
+        <li class="card-list__item">
+          <article class="card">
+            <h2 class="card__question">
+              What does the acronym "WWW" stand for?
+            </h2>
+            <button class="card__button-answer" type="button">
+              Show answer
+            </button>
+            <p class="card__answer">World Wide Web</p>
+            <ul class="card__tag-list">
+              <li class="card__tag-list-item">#Internet</li>
+              <li class="card__tag-list-item">#WWW</li>
+              <li class="card__tag-list-item">#Acronyms</li>
+            </ul>
+            <div class="card__button-bookmark">
+              <button class="bookmark" aria-label="bookmark" type="button">
+                <svg
+                  class="bookmark__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </article>
         </li>
-        <li><input type="button" value="Movies" onclick="" /></li>
-        <li><input type="button" value="HTML" onclick="" /></li>
-        <li><input type="button" value="Geo Politics" onclick="" /></li>
-        <li><input type="button" value="Sport" onclick="" /></li>
-
-        <li>
-          <a href="Bookmark.html"
-            ><img src="./images/bookmark_icon.png" alt="Bookmark"
-          /></a>
+        <!--
+                SECOND CARD
+              -->
+        <li class="card-list__item">
+          <article class="card">
+            <h2 class="card__question">
+              Who is often credited with inventing the World Wide Web?
+            </h2>
+            <button class="card__button-answer" type="button">
+              Show answer
+            </button>
+            <p class="card__answer card__answer--active">Tim Berners-Lee</p>
+            <ul class="card__tag-list">
+              <li class="card__tag-list-item">#Internet</li>
+              <li class="card__tag-list-item">#History</li>
+              <li class="card__tag-list-item">#Inventors</li>
+            </ul>
+            <div class="card__button-bookmark">
+              <button
+                class="bookmark bookmark--active"
+                aria-label="bookmark"
+                type="button"
+              >
+                <svg
+                  class="bookmark__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </article>
         </li>
-        <li>
-          <a href="Profile.html"
-            ><img src="./images/profile-icon.jpg" alt="Profile Picture"
-          /></a>
+        <!--
+                THIRD CARD
+              -->
+        <li class="card-list__item">
+          <article class="card">
+            <h2 class="card__question">
+              What is the protocol used to transfer data from a web server to a
+              web browser, enabling the viewing of web pages?
+            </h2>
+            <button class="card__button-answer" type="button">
+              Show answer
+            </button>
+            <p class="card__answer">HTTP (Hypertext Transfer Protocol)</p>
+            <ul class="card__tag-list">
+              <li class="card__tag-list-item">#Internet</li>
+              <li class="card__tag-list-item">#Protocol</li>
+              <li class="card__tag-list-item">#HTTP</li>
+            </ul>
+            <div class="card__button-bookmark">
+              <button class="bookmark" aria-label="bookmark" type="button">
+                <svg
+                  class="bookmark__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item--active">
+          <a
+            class="navigation__link"
+            href="index.html"
+            aria-label="go to home page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="bookmark.html"
+            aria-label="go to bookmarks page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="profile.html"
+            aria-label="go to profile page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewbox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01m0-11C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+          </a>
         </li>
       </ul>
     </nav>
-    <main>
-      <h3>Hello Quizzer!</h3>
-      <div>
-        <p>Choose a topic above to begin Quiz!!!!</p>
-        <ul class="container">
-          <li>
-            <div>
-              <p>Question 1<br />Full form of HTML</p>
-              <br />
-
-              <input class="show_button" type="button" value="Show Answer" />
-              <p class="answer_text">Answer text</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>Question 2<br />Full form of CSS</p>
-              <br />
-              <input class="show_button" type="button" value="Show Answer" />
-              <p class="answer_text">Answer text</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>Question 3<br />Full form of XML</p>
-              <br />
-              <input class="show_button" type="button" value="Show Answer" />
-              <p class="answer_text">Answer text</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>Question 4<br />Full form of WWW</p>
-              <br />
-
-              <input class="show_button" type="button" value="Show Answer" />
-              <p class="answer_text">Answer text</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </main>
   </body>
-  <footer>
-    <p>&copy; 2026 Quiz App. All rights reserved.</p>
-  </footer>
 </html>
