@@ -15,7 +15,9 @@
 .bookmark--active {
   color: var(--black);
 }
-
+.bookmark--active :active {
+  opacity: 1;
+}
 .bookmark__icon {
   fill: currentcolor;
   width: 2em;

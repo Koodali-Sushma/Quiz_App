@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -46,6 +47,40 @@
             </div>
           </article>
         </li>
+        <li class="card-list__item">
+          <article class="card">
+            <h2 class="card__question">
+              What is the term for a unique address that identifies a specific
+              webpage on the internet?
+            </h2>
+            <button class="card__button-answer" type="button">
+              Show answer
+            </button>
+            <p class="card__answer">URL (Uniform Resource Locator)</p>
+            <ul class="card__tag-list">
+              <li class="card__tag-list-item">#Internet</li>
+              <li class="card__tag-list-item">#URL</li>
+              <li class="card__tag-list-item">#Webpage</li>
+            </ul>
+            <div class="card__button-bookmark">
+              <button
+                class="bookmark bookmark--active"
+                aria-label="bookmark"
+                type="button"
+              >
+                <svg
+                  class="bookmark__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </article>
+        </li>
       </ul>
     </main>
 
@@ -54,7 +89,7 @@
         <li class="navigation__list-item">
           <a
             class="navigation__link"
-            href="index.html"
+            href="./index.html"
             aria-label="go to home page"
           >
             <svg
@@ -72,7 +107,7 @@
         <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
-            href="bookmarks.html"
+            href="./bookmarks.html"
             aria-label="go to bookmarks page"
           >
             <svg
@@ -90,7 +125,7 @@
         <li class="navigation__list-item">
           <a
             class="navigation__link"
-            href="profile.html"
+            href="./profile.html"
             aria-label="go to profile page"
           >
             <svg

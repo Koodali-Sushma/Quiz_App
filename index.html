@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -21,17 +22,28 @@
             <h2 class="card__question">
               What does the acronym "WWW" stand for?
             </h2>
-            <button class="card__button-answer" type="button">
+            <button
+              class="card__button-answer"
+              type="button"
+              data-js="answerButton"
+            >
               Show answer
             </button>
-            <p class="card__answer">World Wide Web</p>
+            <p class="card__answer" data-js="answerDisplay" hidden>
+              World Wide Web
+            </p>
             <ul class="card__tag-list">
               <li class="card__tag-list-item">#Internet</li>
               <li class="card__tag-list-item">#WWW</li>
               <li class="card__tag-list-item">#Acronyms</li>
             </ul>
             <div class="card__button-bookmark">
-              <button class="bookmark" aria-label="bookmark" type="button">
+              <button
+                class="bookmark"
+                aria-label="bookmark"
+                type="button"
+                data-js="bookmarkButton"
+              >
                 <svg
                   class="bookmark__icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,10 +65,14 @@
             <h2 class="card__question">
               Who is often credited with inventing the World Wide Web?
             </h2>
-            <button class="card__button-answer" type="button">
+            <button
+              class="card__button-answer"
+              type="button"
+              data-js="answerButton"
+            >
               Show answer
             </button>
-            <p class="card__answer card__answer--active">Tim Berners-Lee</p>
+            <p class="card__answer" data-js="answerDisplay">Tim Berners-Lee</p>
             <ul class="card__tag-list">
               <li class="card__tag-list-item">#Internet</li>
               <li class="card__tag-list-item">#History</li>
@@ -67,6 +83,7 @@
                 class="bookmark bookmark--active"
                 aria-label="bookmark"
                 type="button"
+                data-js="bookmarkButton"
               >
                 <svg
                   class="bookmark__icon"
@@ -100,7 +117,50 @@
               <li class="card__tag-list-item">#HTTP</li>
             </ul>
             <div class="card__button-bookmark">
-              <button class="bookmark" aria-label="bookmark" type="button">
+              <button
+                class="bookmark"
+                aria-label="bookmark"
+                type="button"
+                data-js="bookmarkButton"
+              >
+                <svg
+                  class="bookmark__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewbox="0 0 24 24"
+                >
+                  <path
+                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </article>
+        </li>
+        <!--
+                Fourth CARD
+              -->
+        <li class="card-list__item">
+          <article class="card">
+            <h2 class="card__question">
+              What is the term for a unique address that identifies a specific
+              webpage on the internet?
+            </h2>
+            <button class="card__button-answer" type="button">
+              Show answer
+            </button>
+            <p class="card__answer">URL (Uniform Resource Locator)</p>
+            <ul class="card__tag-list">
+              <li class="card__tag-list-item">#Internet</li>
+              <li class="card__tag-list-item">#URL</li>
+              <li class="card__tag-list-item">#Webpage</li>
+            </ul>
+            <div class="card__button-bookmark">
+              <button
+                class="bookmark bookmark--active"
+                aria-label="bookmark"
+                type="button"
+                data-js="bookmarkButton"
+              >
                 <svg
                   class="bookmark__icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +182,7 @@
         <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
-            href="index.html"
+            href="./index.html"
             aria-label="go to home page"
           >
             <svg
@@ -140,7 +200,7 @@
         <li class="navigation__list-item">
           <a
             class="navigation__link"
-            href="bookmark.html"
+            href="./bookmark.html"
             aria-label="go to bookmarks page"
           >
             <svg
@@ -158,7 +218,7 @@
         <li class="navigation__list-item">
           <a
             class="navigation__link"
-            href="profile.html"
+            href="./profile.html"
             aria-label="go to profile page"
           >
             <svg
