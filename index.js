@@ -17,14 +17,23 @@ bookmarkButton.addEventListener("click", () => {
 
 /////Task 2
 
-const answerButton = document.querySelector('[data-js="answerButton"');
-const answerDisplay = document.querySelector('[data-js="answerDisplay"');
+const answerButton = document.querySelector('[data-js="answerButton"]');
+const answerDisplay = document.querySelector('[data-js="answerDisplay"]');
+
+let buttonCurrentText = answerButton.textContent;
+
+console.log("buttonCurrentText = ", buttonCurrentText);
+
 answerButton.addEventListener("click", () => {
   if (answerDisplay.hasAttribute("hidden")) {
+    console.log("Showing answer!!!!");
     answerButton.textContent = "Hide Answer";
     answerDisplay.removeAttribute("hidden");
+    buttonCurrentText = "Hide Answer";
   } else {
+    console.log("Hiding answer!!!!");
     answerDisplay.setAttribute("hidden", "");
     answerButton.textContent = "Show Answer";
+    buttonCurrentText = "Show Answer";
   }
 });

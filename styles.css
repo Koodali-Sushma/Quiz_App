@@ -7,6 +7,8 @@
 @import "./components/other-css/navigation.css";
 @import "./components/profile/profile.css";
 @import "./components/other-css/counter-list.css";
+@import "./form.css";
 html {
   scroll-behavior: smooth;
+  overflow: scroll;
 }

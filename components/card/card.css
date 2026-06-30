@@ -30,7 +30,6 @@
 .card__answer {
   margin: 0 2rem;
   font-style: italic;
-  display: none;
 }
 
 .card__answer--active {
