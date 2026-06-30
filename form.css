@@ -1,0 +1,41 @@
+.add_card {
+  background-color: rgb(28, 242, 231);
+  color: deeppink;
+  padding: 1rem 2rem 4rem 1rem;
+  max-width: 30rem;
+}
+/* .add_card li {
+  margin: 1rem 0rem;
+} */
+
+.add_card-form textarea {
+  height: 100px;
+  width: 200px;
+}
+
+.add-new_CardButton {
+  background-color: rgb(155, 84, 178);
+  color: limegreen;
+  border: 2px solid violet;
+  border-radius: 8px;
+  height: 50px;
+  width: 100px;
+  margin-top: 30%;
+}
+.add-new_CardButton:hover {
+  background-color: purple;
+  color: white;
+}
+.add_card-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 20px;
+  justify-content: flex-end;
+  justify-items: center;
+  align-items: center;
+}
+.input_label {
+  margin-top: 30%;
+}

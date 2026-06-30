@@ -1,71 +1,50 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <script src="./index.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./form.js" defer></script>
   </head>
   <body>
     <header class="header">
       <img src="./images/neon-quiz.jpg.avif" />
     </header>
-    <main>
-        <h2>Your Profile</h2>
-      <ul class="profile_flex">
+    <main class="add_card">
+        <h2>Add new Question</h2>
+      <ul class="add_card-form">
         <li>
-            <img src="./images/profile-icon.jpg" alt="Profile Picture" /></li>
+          <label class="input_label" for="question-text_input">Your Question</label></li>
+          <li><textarea
+            data-js="questionText_input"
+            minlength="10"
+            maxlength="100"
+          ></textarea><p class="remaining-characters" data-js="remainingCharacters_question">150 characters left
+          </p>
+        </li>
         <li>
-          <p>
-          Name: <strong>Sushma Koodali</strong></br>
-          Email: sushma.gargya@outlook.com</br>
-          Bio: A passionate quiz enthusiast and web developer.</p>
+          <label class="input_label" for="answer-text_input">Your Answer</label></li>
+          <li>
+          <textarea
+            data-js="answerText_input"
+            minlength="10"
+            maxlength="150"
+          ></textarea>
+          <p class="remaining-characters" data-js="remainingCharacters_answer">150 characters left
+          </p>
+        </li>
+        <li>
+          <label class="input_label" for="tag_input">Tag</label></li>
+          <li><input class="tag_input" data-js="tag_input" ></input>
+        </li>
+        <li>
+          <button class="add-new_CardButton" type="submit" value="Submit"><strong>SUBMIT</strong></button>
         </li>
       </ul>
-      <br/>
-      <ul class="counter-list">
-        <li class="counter-list__item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            width="24"
-            viewbox="0 0 48 48"
-            fill="currentColor"
-          >
-            <path
-              d="M21.55 31.5q.05-3.6.825-5.25.775-1.65 2.925-3.6 2.1-1.9 3.225-3.525t1.125-3.475q0-2.25-1.5-3.75t-4.2-1.5q-2.6 0-4 1.475T17.9 14.95l-4.2-1.85q1.1-2.95 3.725-5.025T23.95 6q5 0 7.7 2.775t2.7 6.675q0 2.4-1.025 4.35-1.025 1.95-3.275 4.1-2.45 2.35-2.95 3.6t-.55 4Zm2.4 12.5q-1.45 0-2.475-1.025Q20.45 41.95 20.45 40.5q0-1.45 1.025-2.475Q22.5 37 23.95 37q1.45 0 2.475 1.025Q27.45 39.05 27.45 40.5q0 1.45-1.025 2.475Q25.4 44 23.95 44Z"
-            />
-          </svg>
-          <span>12</span>
-        </li>
-        <li class="counter-list__item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewbox="0 0 24 24"
-            width="24px"
-            fill="currentColor"
-          >
-            <path d="M0 0h24v24H0V0z" fill="none" />
-            <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
-          </svg>
-          <span>4</span>
-        </li>
-      </ul>
-      <br/>
-      <section class="settings">
-      <h2>Settings</h2>
-      
-      <form class="profile__settings" aria-labelledby="title">
-        <input
-          type="checkbox"
-          id="switch-darkmode"
-          class="profile__settings-darkmode-input"
-          data-js="darkmode-input"
-        />
-        <label for="switch-darkmode" class="profile__settings-darkmode-label"
-          >Toggle Darkmode</label
-        >
-      </form>
-      </section>
     </main>
+
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__list-item">
@@ -86,7 +65,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item ">
           <a
             class="navigation__link"
             href="./bookmark.html"
@@ -104,7 +83,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
             href="./form.html"
@@ -123,7 +102,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item navigation__list-item--active">
+        <li class="navigation__list-item">
           <a
             class="navigation__link"
             href="./profile.html"
@@ -144,5 +123,4 @@
       </ul>
     </nav>
   </body>
-  
 </html>

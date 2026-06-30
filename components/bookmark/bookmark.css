@@ -1,0 +1,24 @@
+.bookmark {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.bookmark:hover {
+  cursor: pointer;
+  border: 2px solid var(--black);
+}
+
+.bookmark--active {
+  color: var(--black);
+}
+.bookmark--active :active {
+  opacity: 1;
+}
+.bookmark__icon {
+  fill: currentcolor;
+  width: 2em;
+}
