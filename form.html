@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" defer></script>
     <script src="./form.js" defer></script>
+    
   </head>
   <body>
     <header class="header">
@@ -14,35 +16,33 @@
     </header>
     <main class="add_card">
         <h2>Add new Question</h2>
-      <ul class="add_card-form">
-        <li>
-          <label class="input_label" for="question-text_input">Your Question</label></li>
-          <li><textarea
+      <form class="add_card-form" data-js="form">
+          <label class="input_label" for="question-text_input">Your Question</label>
+          <textarea
+          name="questionTextarea"
             data-js="questionText_input"
             minlength="10"
             maxlength="100"
-          ></textarea><p class="remaining-characters" data-js="remainingCharacters_question">150 characters left
+          ></textarea>
+            <p class="remaining-characters" data-js="remainingCharacters_question">150 characters left
           </p>
-        </li>
-        <li>
-          <label class="input_label" for="answer-text_input">Your Answer</label></li>
-          <li>
+          <label class="input_label" for="answer-text_input">Your Answer</label>
           <textarea
+          name="answerTextarea"
             data-js="answerText_input"
             minlength="10"
             maxlength="150"
           ></textarea>
           <p class="remaining-characters" data-js="remainingCharacters_answer">150 characters left
           </p>
-        </li>
-        <li>
-          <label class="input_label" for="tag_input">Tag</label></li>
-          <li><input class="tag_input" data-js="tag_input" ></input>
-        </li>
-        <li>
-          <button class="add-new_CardButton" type="submit" value="Submit"><strong>SUBMIT</strong></button>
-        </li>
-      </ul>
+       
+          <label class="input_label" for="tag_input">Tag</label>
+          <li><input class="tag_input" name="tags" data-js="tag_input" ></input>
+        <br/>
+          <button class="add-new_CardButton" type="submit" value="Submit" data-js="add-new_CardButton"><strong>SUBMIT</strong></button>
+</form>
+
+<ul data-js="card-list"></ul>
     </main>
 
     <nav class="navigation">

@@ -19,23 +19,26 @@
   border: 2px solid violet;
   border-radius: 8px;
   height: 50px;
-  width: 100px;
-  margin-top: 30%;
+  width: 150px;
+  margin-top: 10%;
 }
 .add-new_CardButton:hover {
   background-color: purple;
   color: white;
 }
-.add_card-form {
+form {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 20px;
-  justify-content: flex-end;
-  justify-items: center;
+  justify-content: space-around;
   align-items: center;
+  gap: 0;
 }
+
+.tag_input {
+  height: 30px;
+  width: 200px;
+}
+
 .input_label {
-  margin-top: 30%;
+  margin-top: 5%;
 }

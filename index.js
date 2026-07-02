@@ -1,9 +1,4 @@
-/////Task 1
-
-const bookmarkButton = document.querySelector('[data-js="bookmarkButton"]');
-
-let bookmarkActive = true;
-bookmarkButton.addEventListener("click", () => {
+function bookmarkToggleButton() {
   console.log("You clicked me!!!!!");
   event.preventDefault();
   if (bookmarkActive) {
@@ -13,6 +8,29 @@ bookmarkButton.addEventListener("click", () => {
     bookmarkButton.style.color = "var(--white)";
   }
   bookmarkActive = !bookmarkActive;
+}
+
+function ShowHideAnswerToggleButton() {
+  if (answerDisplay.hasAttribute("hidden")) {
+    console.log("Showing answer!!!!");
+    answerButton.textContent = "Hide Answer";
+    answerDisplay.removeAttribute("hidden");
+    buttonCurrentText = "Hide Answer";
+  } else {
+    console.log("Hiding answer!!!!");
+    answerDisplay.setAttribute("hidden", "");
+    answerButton.textContent = "Show Answer";
+    buttonCurrentText = "Show Answer";
+  }
+}
+
+/////Task 1
+
+const bookmarkButton = document.querySelector('[data-js="bookmarkButton"]');
+
+let bookmarkActive = true;
+bookmarkButton.addEventListener("click", () => {
+  bookmarkToggleButton(bookmarkButton, bookmarkActive);
 });
 
 /////Task 2
@@ -25,15 +43,5 @@ let buttonCurrentText = answerButton.textContent;
 console.log("buttonCurrentText = ", buttonCurrentText);
 
 answerButton.addEventListener("click", () => {
-  if (answerDisplay.hasAttribute("hidden")) {
-    console.log("Showing answer!!!!");
-    answerButton.textContent = "Hide Answer";
-    answerDisplay.removeAttribute("hidden");
-    buttonCurrentText = "Hide Answer";
-  } else {
-    console.log("Hiding answer!!!!");
-    answerDisplay.setAttribute("hidden", "");
-    answerButton.textContent = "Show Answer";
-    buttonCurrentText = "Show Answer";
-  }
+  ShowHideAnswerToggleButton(answerButton, answerDisplay, buttonCurrentText);
 });
